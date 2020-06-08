@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import PhotoName from "./Components/PhotoName";
 import Description from "./Components/Description";
 import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <PhotoName />
         <Description />
         <Skills />
+        <Projects />
       </header>
     </div>
   );
