@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-
-import "./App.css";
+import React from "react";
+import styled from "styled-components";
 
 import Navbar from "./Components/Navbar";
 import PhotoName from "./Components/PhotoName";
@@ -10,21 +9,23 @@ import Contact from "./Components/Contact";
 import ProjectContainer from "./Components/ProjectContainer";
 import Projects from "./Components/Projects";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Navbar />
-          <PhotoName />
-          <Description />
-          <Skills />
-          <ProjectContainer projects={Projects} />
-          <Contact />
-        </header>
-      </div>
-    );
-  }
+const Wrapper = styled.section`
+  background: #f1f1f3;
+`;
+
+function App() {
+  return (
+    <Wrapper>
+      <header>
+        <Navbar />
+        <PhotoName />
+      </header>
+      <Description />
+      <Skills />
+      <ProjectContainer projects={Projects} />
+      <Contact />
+    </Wrapper>
+  );
 }
 
 export default App;

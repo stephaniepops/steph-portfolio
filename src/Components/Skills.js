@@ -1,8 +1,9 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 const Skills = () => {
   return (
-    <div>
+    <Element name="skills">
       <h3>Skills/Languages/FrameWorks/Libraries:</h3>
       <ul>
         <li>Java</li>
@@ -10,7 +11,7 @@ const Skills = () => {
         <li>Node.js</li>
         <li>Express</li>
       </ul>
-    </div>
+    </Element>
   );
 };
 
