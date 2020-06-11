@@ -1,11 +1,20 @@
 import React from "react";
-import ProfilePhoto from "../images/profile.jpg";
+import ProfilePhoto from "../images/placeholderImage.jpg";
+
+import styled from "styled-components";
+
+const HeaderImage = styled.img`
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+`;
 
 const PhotoName = () => {
   return (
     <div>
-      <img src={ProfilePhoto} className="" alt="" />
-      <h2>SSsteph.pop(s)</h2>
+      <HeaderImage src={ProfilePhoto} />
+      <h1>steph.pop(s)</h1>
     </div>
   );
 };
