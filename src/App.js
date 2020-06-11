@@ -11,19 +11,28 @@ import Projects from "./Components/Projects";
 
 const Wrapper = styled.section`
   background: #f1f1f3;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+`;
+
+const AppBoundary = styled.section`
+  width: 70%;
 `;
 
 function App() {
   return (
     <Wrapper>
-      <header>
-        <Navbar />
-        <PhotoName />
-        <Description />
-      </header>
-      <Skills />
-      <Contact />
-      <ProjectContainer projects={Projects} />
+      <AppBoundary>
+        <header>
+          <Navbar />
+          <PhotoName />
+          <Description />
+        </header>
+        <Skills />
+        <Contact />
+        <ProjectContainer projects={Projects} />
+      </AppBoundary>
     </Wrapper>
   );
 }
