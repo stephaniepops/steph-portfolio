@@ -19,11 +19,11 @@ function App() {
       <header>
         <Navbar />
         <PhotoName />
+        <Description />
       </header>
-      <Description />
       <Skills />
-      <ProjectContainer projects={Projects} />
       <Contact />
+      <ProjectContainer projects={Projects} />
     </Wrapper>
   );
 }
