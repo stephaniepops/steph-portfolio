@@ -5,7 +5,7 @@ const PhotoName = () => {
   return (
     <div>
       <img src={ProfilePhoto} className="" alt="" />
-      <h2>steph.pop(s)</h2>
+      <h2>SSsteph.pop(s)</h2>
     </div>
   );
 };
