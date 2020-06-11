@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 const Skills = () => {
   return (
     <Element name="skills">
-      <h3>Skills/Languages/FrameWorks/Libraries:</h3>
+      <h2>Skills/Languages/FrameWorks/Libraries:</h2>
       <ul>
         <li>Java</li>
         <li>React</li>

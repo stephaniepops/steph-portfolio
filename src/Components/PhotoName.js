@@ -14,7 +14,7 @@ const PhotoName = () => {
   return (
     <div>
       <HeaderImage src={ProfilePhoto} />
-      <h2>steph.pop(s)</h2>
+      <h1>steph.pop(s)</h1>
     </div>
   );
 };

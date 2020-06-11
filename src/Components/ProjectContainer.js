@@ -6,7 +6,7 @@ import Project from "./Project";
 const ProjectContainer = (props) => {
   return (
     <Element name="projects">
-      <h3>Projects:</h3>
+      <h2>Projects:</h2>
       {props.projects.map((project) => (
         <Project {...project} key={project.key} />
       ))}
