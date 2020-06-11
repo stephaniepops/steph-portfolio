@@ -8,12 +8,26 @@ const HeaderImage = styled.img`
   width: 250px;
   height: 250px;
   margin: 15px;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.2) rotate(-90deg);
+  }
+`;
+
+const HeaderWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const PhotoName = () => {
   return (
     <div>
-      <HeaderImage src={ProfilePhoto} />
+      <HeaderWrapper>
+        <HeaderImage src={ProfilePhoto} />
+      </HeaderWrapper>
       <h1>steph.pop(s)</h1>
     </div>
   );

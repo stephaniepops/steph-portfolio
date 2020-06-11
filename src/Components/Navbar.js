@@ -20,41 +20,39 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <nav>
-        <ul>
-          <ListItem
-            onClick={() =>
-              scroller.scrollTo("skills", {
-                duration: 800,
-                delay: 0,
-                smooth: "easeInOutQuart",
-              })
-            }
-          >
-            Skills
-          </ListItem>
-          <ListItem
-            onClick={() =>
-              scroller.scrollTo("projects", {
-                duration: 800,
-                delay: 0,
-                smooth: "easeInOutQuart",
-              })
-            }
-          >
-            Projects
-          </ListItem>
-          <ListItem
-            onClick={() =>
-              scroller.scrollTo("contact", {
-                duration: 800,
-                delay: 0,
-                smooth: "easeInOutQuart",
-              })
-            }
-          >
-            Contact
-          </ListItem>
-        </ul>
+        <ListItem
+          onClick={() =>
+            scroller.scrollTo("skills", {
+              duration: 800,
+              delay: 0,
+              smooth: "easeInOutQuart",
+            })
+          }
+        >
+          Skills
+        </ListItem>
+        <ListItem
+          onClick={() =>
+            scroller.scrollTo("projects", {
+              duration: 800,
+              delay: 0,
+              smooth: "easeInOutQuart",
+            })
+          }
+        >
+          Projects
+        </ListItem>
+        <ListItem
+          onClick={() =>
+            scroller.scrollTo("contact", {
+              duration: 800,
+              delay: 0,
+              smooth: "easeInOutQuart",
+            })
+          }
+        >
+          Contact
+        </ListItem>
       </nav>
     </NavWrapper>
   );
