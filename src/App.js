@@ -1,28 +1,30 @@
 import React from "react";
-
-import "./App.css";
+import styled from "styled-components";
 
 import Navbar from "./Components/Navbar";
 import PhotoName from "./Components/PhotoName";
 import Description from "./Components/Description";
 import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import Resume from "./Components/Resume";
+import ProjectContainer from "./Components/ProjectContainer";
+import Projects from "./Components/Projects";
+
+const Wrapper = styled.section`
+  background: #f1f1f3;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Wrapper>
+      <header>
         <Navbar />
         <PhotoName />
         <Description />
-        <Skills />
-        <Projects />
-        <Resume />
-        <Contact />
       </header>
-    </div>
+      <Skills />
+      <Contact />
+      <ProjectContainer projects={Projects} />
+    </Wrapper>
   );
 }
 
