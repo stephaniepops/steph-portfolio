@@ -1,15 +1,15 @@
 import React from "react";
 import { Element } from "react-scroll";
+import { Title, Content } from "../GlobalStyledComponents";
 
 const Contact = () => {
   return (
     <Element name="contact">
-      <h2>Contact me:</h2>
-      <ul>
-        <li>Email: stephanie.pops@gmail.com </li>
-        <li>Linkedn: (Add Linkedin Link)</li>
-        <li> Git: (add git info)</li>
-      </ul>
+      <Title>Contact</Title>
+      <Content>
+        Email: stephanie.pops@gmail.com Linkedn: (Add Linkedin Link) Git: (add
+        git info)
+      </Content>
     </Element>
   );
 };
