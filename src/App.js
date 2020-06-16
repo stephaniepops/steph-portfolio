@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 import Navbar from "./Components/Navbar";
 import PhotoName from "./Components/PhotoName";
@@ -14,10 +14,11 @@ const Wrapper = styled.section`
   padding: 15px;
   display: flex;
   justify-content: center;
+  font-family: "Roboto Mono", monospace;
 `;
 
 const AppBoundary = styled.section`
-  width: 70%;
+  max-width: 1000px;
 `;
 
 function App() {
