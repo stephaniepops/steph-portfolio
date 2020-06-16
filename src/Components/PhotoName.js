@@ -1,7 +1,6 @@
 import React from "react";
 import ProfilePhoto from "../images/placeholderImage.jpg";
-
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const HeaderImage = styled.img`
   border-radius: 50%;
@@ -15,11 +14,19 @@ const HeaderImage = styled.img`
   }
 `;
 
-const HeaderWrapper = styled.section`
+const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const Name = styled.div`
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
 `;
 
 const PhotoName = () => {
@@ -28,7 +35,7 @@ const PhotoName = () => {
       <HeaderWrapper>
         <HeaderImage src={ProfilePhoto} />
       </HeaderWrapper>
-      <h1>steph.pop(s)</h1>
+      <Name>steph.pop(s)</Name>
     </div>
   );
 };

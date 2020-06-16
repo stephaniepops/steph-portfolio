@@ -1,12 +1,13 @@
 import React from "react";
 import { scroller } from "react-scroll";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const NavWrapper = styled.section`
   background: transparent;
   border: none;
   width: 100%;
   text-align: center;
+  margin-bottom: 20px;
 `;
 
 const ListItem = styled.li`
