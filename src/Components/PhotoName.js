@@ -35,7 +35,7 @@ const PhotoName = () => {
       <HeaderWrapper>
         <HeaderImage src={ProfilePhoto} />
       </HeaderWrapper>
-      <Name>steph.pop(s)</Name>
+      <Name>Steph.pop(s)</Name>
     </div>
   );
 };

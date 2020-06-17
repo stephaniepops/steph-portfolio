@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { scroller } from "react-scroll";
 import styled from "styled-components/macro";
 
@@ -15,13 +15,20 @@ const ListItem = styled.li`
   float: none;
   padding-left: 30px;
   padding-right: 30px;
+  font-size: ${({ isHover }) => (isHover ? "2.50em" : "1.25em")};
+  transition: 0.25s linear all;
 `;
 
 const Navbar = () => {
+  const [hover, setHover] = useState(false);
+
   return (
     <NavWrapper>
       <nav>
         <ListItem
+          onMouseOver={() => setHover(true)}
+          onMouseOut={() => setHover(false)}
+          isHover={hover}
           onClick={() =>
             scroller.scrollTo("skills", {
               duration: 800,
@@ -33,6 +40,7 @@ const Navbar = () => {
           Skills
         </ListItem>
         <ListItem
+          isHover={hover}
           onClick={() =>
             scroller.scrollTo("projects", {
               duration: 800,
