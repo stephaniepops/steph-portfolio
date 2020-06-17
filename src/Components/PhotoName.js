@@ -23,7 +23,7 @@ const HeaderWrapper = styled.div`
 
 const Name = styled.div`
   font-size: 2.5em;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 20px;
@@ -35,7 +35,7 @@ const PhotoName = () => {
       <HeaderWrapper>
         <HeaderImage src={ProfilePhoto} />
       </HeaderWrapper>
-      <Name>steph.pop(s)</Name>
+      <Name>Steph.pop(s)</Name>
     </div>
   );
 };
