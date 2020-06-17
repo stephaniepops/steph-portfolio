@@ -1,4 +1,4 @@
-const Projects = [
+export const Projects = [
   {
     title: "Portfolio Project",
     description: "The Portfolio you are currently browsing",
@@ -22,4 +22,8 @@ const Projects = [
   },
 ];
 
-export default Projects;
+export const Skills = [
+  {
+    //import treehouse badges here
+  },
+];

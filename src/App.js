@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components/macro";
-
-import Navbar from "./Components/Navbar";
-import PhotoName from "./Components/PhotoName";
-import Description from "./Components/Description";
-import Skills from "./Components/Skills";
-import Contact from "./Components/Contact";
-import ProjectContainer from "./Components/ProjectContainer";
-import Projects from "./Components/Projects";
+import Navbar from "./components/Navbar";
+import PhotoName from "./components/PhotoName";
+import Description from "./components/Description";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import ProjectContainer from "./components/ProjectContainer";
+import { Projects } from "./data/UserInfo";
 
 const Wrapper = styled.div`
   background: #f1f1f3;
