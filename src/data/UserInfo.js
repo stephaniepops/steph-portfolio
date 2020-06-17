@@ -22,8 +22,25 @@ export const Projects = [
   },
 ];
 
-export const Skills = [
+export const SkillList = [
   {
-    //import treehouse badges here
+    name: "React",
+    image: "",
+  },
+  {
+    name: "Java",
+    image: "",
+  },
+  {
+    name: "Node.js",
+    image: "",
+  },
+  {
+    name: "Express",
+    image: "",
+  },
+  {
+    name: "SQL",
+    image: "",
   },
 ];

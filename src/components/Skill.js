@@ -2,18 +2,13 @@ import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 import { Title, Content } from "../GlobalStyledComponents";
-import Skill from "./Skill";
 
-const Skills = (props) => {
+const Skill = ({ name, image }) => {
   return (
     <Element name="skills">
-      <Title>Skills</Title>
-      {props.skills.map((skill, index) => (
-        <Skill {...skill} key={index} />
-      ))}
-      <Skill />
+      <Content>{name}</Content>
     </Element>
   );
 };
 
-export default Skills;
+export default Skill;
