@@ -40,6 +40,7 @@ const Navbar = () => {
           Skills
         </ListItem>
         <ListItem
+          isHover={hover}
           onClick={() =>
             scroller.scrollTo("projects", {
               duration: 800,
