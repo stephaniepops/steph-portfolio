@@ -1,5 +1,12 @@
 import React from "react";
 import styled from "styled-components/macro";
+import Navbar from "./components/Navbar";
+import PhotoName from "./components/PhotoName";
+import Description from "./components/Description";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import ProjectContainer from "./components/ProjectContainer";
+import { Projects } from "./data/UserInfo";
 
 import Navbar from "./components/Navbar";
 import PhotoName from "./components/PhotoName";
@@ -17,7 +24,7 @@ const Wrapper = styled.section`
   font-family: "Roboto Mono", monospace;
 `;
 
-const AppBoundary = styled.section`
+const AppBoundary = styled.div`
   max-width: 1000px;
 `;
 
