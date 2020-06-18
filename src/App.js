@@ -31,8 +31,8 @@ function App() {
         </header>
         />
         <Skills skills={SkillList} />
-        <Contact />
         <ProjectContainer projects={Projects} />
+        <Contact />
       </AppBoundary>
     </Wrapper>
   );
