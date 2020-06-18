@@ -1,9 +1,11 @@
+import PortfolioProject from "../images/PortfolioProject.jpg";
+
 export const Projects = [
   {
     title: "Portfolio Project",
     description: "The Portfolio you are currently browsing",
     tech: "React, JavaScript, React Styled Components",
-    image: "",
+    image: PortfolioProject,
     imageDescription: "",
   },
   {
@@ -22,8 +24,25 @@ export const Projects = [
   },
 ];
 
-export const Skills = [
+export const SkillList = [
   {
-    //import treehouse badges here
+    name: "React",
+    image: "",
+  },
+  {
+    name: "Java",
+    image: "",
+  },
+  {
+    name: "Node.js",
+    image: "",
+  },
+  {
+    name: "Express",
+    image: "",
+  },
+  {
+    name: "SQL",
+    image: "",
   },
 ];
