@@ -1,7 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components/macro";
-import { Title } from "../GlobalStyledComponents";
+import { Title, ElementPadding } from "../GlobalStyledComponents";
 
 import Project from "./Project";
 
@@ -14,14 +14,16 @@ const Container = styled.div`
 
 const ProjectContainer = (props) => {
   return (
-    <Element name="projects">
-      <Title>Projects</Title>
-      <Container>
-        {props.projects.map((project, index) => (
-          <Project {...project} key={index} />
-        ))}
-      </Container>
-    </Element>
+    <ElementPadding>
+      <Element name="projects">
+        <Title>Projects</Title>
+        <Container>
+          {props.projects.map((project, index) => (
+            <Project {...project} key={index} />
+          ))}
+        </Container>
+      </Element>
+    </ElementPadding>
   );
 };
 

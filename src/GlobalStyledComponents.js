@@ -11,3 +11,7 @@ export const Content = styled.div`
   text-align: center;
   margin: 20px;
 `;
+
+export const ElementPadding = styled.div`
+  margin-top: 75px;
+`;
