@@ -1,9 +1,11 @@
+import PortfolioProject from "../images/PortfolioProject.jpg";
+
 export const Projects = [
   {
     title: "Portfolio Project",
     description: "The Portfolio you are currently browsing",
     tech: "React, JavaScript, React Styled Components",
-    image: "",
+    image: PortfolioProject,
     imageDescription: "",
   },
   {

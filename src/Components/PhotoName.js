@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePhoto from "../images/placeholderImage.jpg";
+import ProfilePhoto from "../images/LogoStephFlip.jpg";
 import styled from "styled-components/macro";
 
 const HeaderImage = styled.img`
@@ -8,6 +8,15 @@ const HeaderImage = styled.img`
   height: 250px;
   margin: 15px;
   transition: all 0.5s;
+  animation: hueChange 20s infinite;
+  @keyframes hueChange {
+    from {
+      filter: hue-rotate(0deg);
+d    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
 
   &:hover {
     transform: scale(1.2) rotate(-90deg);

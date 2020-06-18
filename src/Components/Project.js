@@ -15,6 +15,17 @@ const Tile = styled.div`
 const ProjectTitle = styled.div`
   text-align: center;
   font-weight: 400;
+  font-size: 1.5em;
+`;
+
+const ProjectImage = styled.img`
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  border-radius: 50%;
+  border-color: #575757;
+  border-style: double;
+  border-width: 6.5px;
 `;
 
 const Project = ({ title, image, imageDescription, description, tech }) => {
@@ -29,7 +40,7 @@ const Project = ({ title, image, imageDescription, description, tech }) => {
       >
         {title}
       </ProjectTitle>
-      <img src={image} alt={imageDescription} />
+      <ProjectImage src={image} alt={imageDescription} />
       <p>{description}</p>
       <p>Technologies Used: {tech}</p>
     </Tile>
