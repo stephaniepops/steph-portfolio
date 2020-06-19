@@ -7,6 +7,7 @@ const NavLink = styled.div`
   float: none;
   padding-left: 30px;
   padding-right: 30px;
+  cursor: pointer;
   font-size: ${({ isHover }) => (isHover ? "1.75em" : "1.25em")};
   transition: 0.25s linear all;
 `;
