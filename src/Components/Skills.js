@@ -4,6 +4,17 @@ import styled from "styled-components";
 import { Title, ElementPadding } from "../GlobalStyledComponents";
 import Skill from "./Skill";
 
+const axios = require("axios");
+
+axios
+  .get("https://teamtreehouse.com/stephaniepops.json")
+  .then(function (res) {
+    console.log(res.data.badges);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 const Skills = (props) => {
   return (
     <ElementPadding>
