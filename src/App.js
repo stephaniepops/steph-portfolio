@@ -29,7 +29,6 @@ function App() {
           <PhotoName />
           <Description />
         </header>
-        />
         <Skills skills={SkillList} />
         <ProjectContainer projects={Projects} />
         <Contact />

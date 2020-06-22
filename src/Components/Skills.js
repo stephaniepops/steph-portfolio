@@ -1,21 +1,62 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Element } from "react-scroll";
-import styled from "styled-components";
 import { Title, ElementPadding } from "../GlobalStyledComponents";
 import Skill from "./Skill";
-
-const axios = require("axios");
-
-axios
-  .get("https://teamtreehouse.com/stephaniepops.json")
-  .then(function (res) {
-    console.log(res.data.badges);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+import axios from "axios";
+import Chart from "react-apexcharts";
+import { useState } from "react";
 
 const Skills = (props) => {
+  const [chart, setChart] = useState(null);
+
+  const [courseNames, setCourseNames] = useState(null);
+  const [coursePoints, setCoursePoints] = useState(null);
+
+  useEffect(() => {
+    getBadges();
+  }, []);
+
+  const getBadges = async () => {
+    try {
+      const { data } = await axios.get(
+        "https://teamtreehouse.com/stephaniepops.json"
+      );
+
+      let courseNames = [];
+      let coursePoints = [];
+
+      for (let [key, value] of Object.entries(data.points)) {
+        if (value > 0) {
+          courseNames.push(key);
+          coursePoints.push(value);
+        }
+      }
+
+      setCourseNames(courseNames);
+      setCoursePoints(coursePoints);
+      setChart({
+        series: [
+          {
+            name: "Series 1",
+            data: coursePoints,
+          },
+        ],
+        options: {
+          chart: {
+            height: 350,
+            type: "radar",
+          },
+          title: {
+            text: "Team Treehouse Tutorial Points",
+          },
+          xaxis: {
+            categories: courseNames,
+          },
+        },
+      });
+    } catch (error) {}
+  };
+
   return (
     <ElementPadding>
       <Element name="skills">
@@ -24,6 +65,14 @@ const Skills = (props) => {
           <Skill {...skill} key={index} />
         ))}
         <Skill />
+        {chart && (
+          <Chart
+            options={chart.options}
+            series={chart.series}
+            type="radar"
+            height={350}
+          />
+        )}
       </Element>
     </ElementPadding>
   );
