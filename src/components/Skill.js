@@ -1,7 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import styled from "styled-components";
-import { Title, Content } from "../GlobalStyledComponents";
+import { Content } from "../GlobalStyledComponents";
 
 const Skill = ({ name, image }) => {
   return (
