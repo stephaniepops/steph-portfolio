@@ -4,7 +4,7 @@ export const Projects = [
   {
     title: "Portfolio Project",
     description: "The Portfolio you are currently browsing",
-    tech: "React, JavaScript, React Styled Components",
+    tech: ["React, JavaScript, React Styled Components"],
     image: PortfolioProject,
     imageDescription: "",
   },
