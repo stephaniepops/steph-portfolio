@@ -82,8 +82,8 @@ const Skills = (props) => {
           <Skill {...skill} key={index} />
         ))}
         <Skill />
-        <SkillTitle> Team Treehouse Tutorial Points</SkillTitle>
-        <ChartSpacing>
+        {/* <SkillTitle> Team Treehouse Tutorial Points</SkillTitle> */}
+        {/* <ChartSpacing>
           {chart && (
             <Chart
               options={chart.options}
@@ -92,7 +92,7 @@ const Skills = (props) => {
               width={500}
             />
           )}
-        </ChartSpacing>
+        </ChartSpacing> */}
       </Element>
     </ElementPadding>
   );

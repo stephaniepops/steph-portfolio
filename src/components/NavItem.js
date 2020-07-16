@@ -3,11 +3,7 @@ import { scroller } from "react-scroll";
 import styled from "styled-components/macro";
 
 const NavLink = styled.div`
-  display: inline-block;
-  float: none;
-  padding-left: 30px;
   cursor: pointer;
-  padding-right: 30px;
   font-size: ${({ isHover }) => (isHover ? "1.75em" : "1.25em")};
   transition: 0.25s linear all;
 `;

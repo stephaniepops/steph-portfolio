@@ -9,7 +9,7 @@ const Container = styled.div`
   margin: 1.1em auto;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 800px));
 `;
 
 const ProjectContainer = (props) => {

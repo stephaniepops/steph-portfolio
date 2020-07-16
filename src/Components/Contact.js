@@ -5,9 +5,19 @@ import GitHubIcon from "../images/GitHubIcon.svg";
 import LinkedinIcon from "../images/LinkedinIcon.svg";
 import styled from "styled-components/macro";
 
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const LinkIcon = styled.img`
   width: 50px;
   height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+`;
+const Email = styled.div`
+  margin-bottom: 25px;
 `;
 
 const Contact = () => {
@@ -16,8 +26,12 @@ const Contact = () => {
       <Element name="contact">
         <Title>Contact</Title>
         <Content>
-          stephanie.pops@gmail.com
-          <div>
+          <Email>
+            <a href="mailto: stephanie.pops@gmail.com">
+              stephanie.pops@gmail.com
+            </a>
+          </Email>
+          <IconContainer>
             <a
               href="https://www.linkedin.com/in/stephaniepops"
               target="_blank"
@@ -26,13 +40,13 @@ const Contact = () => {
               <LinkIcon src={LinkedinIcon} />
             </a>
             <a
-              href="https://www.linkedin.com/in/stephaniepops"
+              href="https:/https://github.com/stephaniepops"
               target="_blank"
               rel="noopener noreferrer"
             >
               <LinkIcon src={GitHubIcon} />
             </a>
-          </div>
+          </IconContainer>
         </Content>
       </Element>
     </ElementPadding>

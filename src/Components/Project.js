@@ -1,27 +1,50 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 
+const Layout = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const InnerText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  text-align: left;
+`;
+
 const Tile = styled.div`
   box-sizing: border-box;
-  background: white;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  box-shadow: 5px 5px 4px #d6d6d6;
+  box-shadow: 8px 4px 15px 5px #0000000d;
   text-align: center;
-  padding: 1em;
-  margin-bottom: 1.5em;
+  padding: 30px;
 `;
 
-const ProjectTitle = styled.div`
-  text-align: center;
+const Title = styled.div`
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+`;
+const Description = styled.div`
+  flex-grow: 1;
+  margin-bottom: 20px;
 `;
 
-const ProjectImage = styled.img`
-  width: 250px;
-  height: 250px;
+const Image = styled.img`
+  width: 175px;
+  height: 175px;
   margin: 15px;
+  margin-bottom: 5px;
   border-radius: 50%;
   border-color: #575757;
   border-style: double;
@@ -33,16 +56,20 @@ const Project = ({ title, image, imageDescription, description, tech }) => {
 
   return (
     <Tile>
-      <ProjectTitle
-        onMouseOver={() => setHover(true)}
-        onMouseOut={() => setHover(false)}
-        isHover={hover}
-      >
-        {title}
-      </ProjectTitle>
-      <ProjectImage src={image} alt={imageDescription} />
-      <p>{description}</p>
-      <p>Technologies Used: {tech}</p>
+      <Layout>
+        <Image src={image} alt={imageDescription} />
+        <InnerText>
+          <Title
+            onMouseOver={() => setHover(true)}
+            onMouseOut={() => setHover(false)}
+            isHover={hover}
+          >
+            {title}
+          </Title>
+          <Description>{description}</Description>
+          <div>{tech}</div>
+        </InnerText>
+      </Layout>
     </Tile>
   );
 };
