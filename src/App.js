@@ -7,31 +7,61 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import ProjectContainer from "./components/ProjectContainer";
 import { Projects, SkillList } from "./data/UserInfo";
+import { motion } from "framer-motion";
 
-const Wrapper = styled.section`
-  background: #f1f1f3;
+const Wrapper = styled.div`
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
   padding: 15px;
   display: flex;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
 `;
 
-const AppBoundary = styled.div`
+const AppBoundary = styled(motion.div)`
   max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+export const item = {
+  hidden: { opacity: 0, y: -20 },
+  show: { opacity: 1, y: 0 },
+};
+
+const Motion = styled(motion.div)``;
 
 function App() {
   return (
     <Wrapper>
-      <AppBoundary>
-        <header>
+      <AppBoundary variants={container} initial="hidden" animate="show">
+        <Motion variants={item}>
           <Navbar />
+        </Motion>
+        <Motion variants={item}>
           <PhotoName />
+        </Motion>
+        <Motion variants={item}>
           <Description />
-        </header>
-        <Skills skills={SkillList} />
-        <ProjectContainer projects={Projects} />
-        <Contact />
+        </Motion>
+        <Motion variants={item}>
+          <Skills skills={SkillList} />
+        </Motion>
+        <Motion variants={item}>
+          <ProjectContainer projects={Projects} />
+        </Motion>
+        <Motion variants={item}>
+          <Contact />
+        </Motion>
       </AppBoundary>
     </Wrapper>
   );

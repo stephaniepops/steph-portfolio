@@ -3,12 +3,16 @@ import React from "react";
 import styled from "styled-components/macro";
 import NavItem from "./NavItem";
 
-const NavWrapper = styled.section`
-  background: transparent;
+const NavWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border: none;
-  width: 100%;
-  text-align: center;
+
+  max-width: 400px;
+  margin: 0 auto;
   margin-bottom: 20px;
+  font-size: 20px;
 `;
 const Navbar = () => {
   return (
