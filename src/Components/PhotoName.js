@@ -1,25 +1,22 @@
 import React from "react";
 import ProfilePhoto from "../images/LogoStephFlip.jpg";
 import styled from "styled-components/macro";
+import { motion } from "framer-motion";
 
-const HeaderImage = styled.img`
+const HeaderImage = styled(motion.img)`
   border-radius: 50%;
-  width: 250px;
   height: 250px;
+  width: 250px;
   margin: 15px;
   transition: all 0.5s;
   animation: hueChange 20s infinite;
   @keyframes hueChange {
     from {
       filter: hue-rotate(0deg);
-d    }
+    }
     to {
       filter: hue-rotate(360deg);
     }
-  }
-
-  &:hover {
-    transform: scale(1.2) rotate(-90deg);
   }
 `;
 
@@ -28,6 +25,8 @@ const HeaderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 250px;
 `;
 
 const Name = styled.div`
@@ -42,7 +41,14 @@ const PhotoName = () => {
   return (
     <div>
       <HeaderWrapper>
-        <HeaderImage src={ProfilePhoto} />
+        <HeaderImage
+          whileHover={{
+            zoom: 1.05,
+
+            transition: { duration: 0.25, ease: "easeInOut" },
+          }}
+          src={ProfilePhoto}
+        />
       </HeaderWrapper>
       <Name>Steph.pop(s)</Name>
     </div>

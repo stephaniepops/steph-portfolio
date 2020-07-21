@@ -8,12 +8,11 @@ const NavWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   border: none;
-  margin-bottom: 20px;
+
   max-width: 400px;
   margin: 0 auto;
-  > div {
-    margin: 15px;
-  }
+  margin-bottom: 20px;
+  font-size: 20px;
 `;
 const Navbar = () => {
   return (

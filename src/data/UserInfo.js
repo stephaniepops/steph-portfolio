@@ -1,26 +1,20 @@
 import PortfolioProject from "../images/LogoStephFlip.jpg";
+import figma from "../images/logos/figma.svg";
+import framer from "../images/logos/framer.svg";
+import git from "../images/logos/git.svg";
+import java from "../images/logos/java.svg";
+import node from "../images/logos/node-dot-js.svg";
+import react from "../images/logos/react.svg";
+import styledComponents from "../images/logos/styled-components.svg";
+import javaScript from "../images/logos/javascript.svg";
 
 export const Projects = [
   {
     title: "Portfolio Project",
     description:
       "The Portfolio you are currently browsing, used as a project to learn React blah bloo blee adding a little more detail. that should be good. Potentially a bit more here",
-    tech: ["React, JavaScript, React Styled Components"],
+    techStack: ["React", "JavaScript", "Styled Components", "Framer Motion"],
     image: PortfolioProject,
-    imageDescription: "",
-  },
-  {
-    title: "Portfolio Project",
-    description: "The Portfolio you are currently browsing",
-    tech: "React, JavaScript, React Styled Components",
-    image: "",
-    imageDescription: "",
-  },
-  {
-    title: "Portfolio Project",
-    description: "The Portfolio you are currently browsing",
-    tech: "React, JavaScript, React Styled Components",
-    image: "",
     imageDescription: "",
   },
 ];
@@ -28,22 +22,42 @@ export const Projects = [
 export const SkillList = [
   {
     name: "React",
-    image: "",
+    image: react,
+    url: "",
   },
   {
     name: "Java",
-    image: "",
+    image: java,
+    url: "",
   },
   {
     name: "Node.js",
-    image: "",
+    image: node,
+    url: "",
   },
   {
-    name: "Express",
-    image: "",
+    name: "Figma",
+    image: figma,
+    url: "",
   },
   {
-    name: "SQL",
-    image: "",
+    name: "Styled Components",
+    image: styledComponents,
+    url: "",
+  },
+  {
+    name: "JavaScript",
+    image: javaScript,
+    url: "",
+  },
+  {
+    name: "GitHub",
+    image: git,
+    url: "",
+  },
+  {
+    name: "Framer Motion",
+    image: framer,
+    url: "",
   },
 ];

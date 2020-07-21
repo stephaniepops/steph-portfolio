@@ -38,28 +38,30 @@ export const item = {
   show: { opacity: 1, y: 0 },
 };
 
+const Motion = styled(motion.div)``;
+
 function App() {
   return (
     <Wrapper>
       <AppBoundary variants={container} initial="hidden" animate="show">
-        <motion.div variants={item}>
+        <Motion variants={item}>
           <Navbar />
-        </motion.div>
-        <motion.div variants={item}>
+        </Motion>
+        <Motion variants={item}>
           <PhotoName />
-        </motion.div>
-        <motion.div variants={item}>
+        </Motion>
+        <Motion variants={item}>
           <Description />
-        </motion.div>
-        <motion.div variants={item}>
+        </Motion>
+        <Motion variants={item}>
           <Skills skills={SkillList} />
-        </motion.div>
-        <motion.div variants={item}>
+        </Motion>
+        <Motion variants={item}>
           <ProjectContainer projects={Projects} />
-        </motion.div>
-        <motion.div variants={item}>
+        </Motion>
+        <Motion variants={item}>
           <Contact />
-        </motion.div>
+        </Motion>
       </AppBoundary>
     </Wrapper>
   );

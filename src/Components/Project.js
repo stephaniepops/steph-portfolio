@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
+import TechBox from "./TechBox";
+import { mediumBreakPoint, smallBreakPoint } from "../constants";
 
 const Layout = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${mediumBreakPoint}) {
     flex-direction: column;
   }
 `;
@@ -51,7 +53,27 @@ const Image = styled.img`
   border-width: 6.5px;
 `;
 
-const Project = ({ title, image, imageDescription, description, tech }) => {
+const TechStackContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    max-width: 240px;
+    justify-content: center;
+    align-self: center;
+  }
+`;
+
+const Project = ({
+  title,
+  image,
+  imageDescription,
+  description,
+  techStack,
+}) => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -67,7 +89,11 @@ const Project = ({ title, image, imageDescription, description, tech }) => {
             {title}
           </Title>
           <Description>{description}</Description>
-          <div>{tech}</div>
+          <TechStackContainer>
+            {techStack.map((tech) => (
+              <TechBox text={tech} />
+            ))}
+          </TechStackContainer>
         </InnerText>
       </Layout>
     </Tile>
