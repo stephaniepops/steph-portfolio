@@ -1,5 +1,4 @@
 import React from "react";
-import { Content } from "../GlobalStyledComponents";
 import styled from "styled-components/macro";
 
 const Logo = styled.img`
@@ -13,11 +12,16 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const Text = styled.div`
+  text-align: center;
+  margin: 20px;
+`;
+
 const Skill = ({ name, image }) => {
   return (
     <Container>
       <Logo src={image} alt={name} />
-      <Content>{name}</Content>
+      <Text>{name}</Text>
     </Container>
   );
 };

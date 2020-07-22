@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 import TechBox from "./TechBox";
+import ProjectLinks from "./ProjectLinks";
 import { mediumBreakPoint, smallBreakPoint } from "../constants";
 
 const Layout = styled.div`
@@ -26,20 +27,26 @@ const Tile = styled.div`
   box-shadow: 8px 4px 15px 5px #0000000d;
   text-align: center;
   padding: 30px;
+  position: relative;
 `;
 
 const Title = styled.div`
   font-weight: 400;
   font-size: 1.25em;
-  margin-bottom: 15px;
+  margin: 15px 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${mediumBreakPoint}) {
     text-align: center;
   }
 `;
+
 const Description = styled.div`
   flex-grow: 1;
   margin-bottom: 20px;
+
+  @media screen and (max-width: ${mediumBreakPoint}) {
+    text-align: center;
+  }
 `;
 
 const Image = styled.img`
@@ -57,14 +64,23 @@ const TechStackContainer = styled.div`
   display: flex;
   flex-direction: row;
 
+  width: 100%;
+
   @media screen and (max-width: ${smallBreakPoint}) {
     flex-direction: column;
     text-align: center;
-    width: 100vw;
     max-width: 240px;
     justify-content: center;
     align-self: center;
   }
+  @media screen and (max-width: ${mediumBreakPoint}) {
+    justify-content: center;
+    align-self: center;
+  }
+`;
+
+const TitleLinkContainer = styled.div`
+  display: flex;
 `;
 
 const Project = ({
@@ -73,13 +89,18 @@ const Project = ({
   imageDescription,
   description,
   techStack,
+  codeLink,
+  demoLink,
 }) => {
   const [hover, setHover] = useState(false);
 
   return (
     <Tile>
+      <ProjectLinks codeLink={codeLink} demoLink={demoLink}></ProjectLinks>
+
       <Layout>
         <Image src={image} alt={imageDescription} />
+
         <InnerText>
           <Title
             onMouseOver={() => setHover(true)}

@@ -3,8 +3,10 @@ import styled from "styled-components/macro";
 
 const Description = () => {
   const Desc = styled.div`
+    font-size: 1.2em;
     line-height: 30px;
-    font-weight: 300;
+    font-weight: 400;
+    padding: 15px;
   `;
   return (
     <Desc>

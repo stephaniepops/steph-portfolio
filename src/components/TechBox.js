@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { mediumBreakPoint } from "../constants";
 
 const Container = styled.div`
   margin: 5px;
