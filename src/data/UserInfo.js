@@ -12,10 +12,12 @@ export const Projects = [
   {
     title: "Portfolio Project",
     description:
-      "The Portfolio you are currently browsing, used as a project to learn React blah bloo blee adding a little more detail. that should be good. Potentially a bit more here",
+      "After completing a number of React tutorials on Team Treehouse, I decided to practice the skills I learned by creating my portfolio.",
     techStack: ["React", "JavaScript", "Styled Components", "Framer Motion"],
     image: PortfolioProject,
     imageDescription: "",
+    codeLink: "https://github.com/stephaniepops/steph-portfolio",
+    demoLink: null,
   },
 ];
 

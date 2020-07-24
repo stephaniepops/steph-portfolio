@@ -1,5 +1,5 @@
 import React from "react";
-
+import resumeLink from "../resume.pdf";
 import styled from "styled-components/macro";
 import NavItem from "./NavItem";
 
@@ -17,7 +17,9 @@ const NavWrapper = styled.div`
 const Navbar = () => {
   return (
     <NavWrapper>
-      <NavItem name="Skills" link="skills"></NavItem>
+      <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+        <NavItem name="Resume"></NavItem>
+      </a>
       <NavItem name="Projects" link="projects"></NavItem>
       <NavItem name="Contact" link="contact"></NavItem>
     </NavWrapper>

@@ -1,8 +1,8 @@
 import React from "react";
-import { Content } from "../GlobalStyledComponents";
 import styled from "styled-components/macro";
+import { motion } from "framer-motion";
 
-const Logo = styled.img`
+const Logo = styled(motion.img)`
   height: 75px;
   width: 75px;
 `;
@@ -13,11 +13,23 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const Text = styled.div`
+  text-align: center;
+  margin: 20px;
+`;
+
 const Skill = ({ name, image }) => {
   return (
     <Container>
-      <Logo src={image} alt={name} />
-      <Content>{name}</Content>
+      <Logo
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 0.1, ease: "easeInOut" },
+        }}
+        src={image}
+        alt={name}
+      />
+      <Text>{name}</Text>
     </Container>
   );
 };

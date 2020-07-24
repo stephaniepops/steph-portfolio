@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import { scroller } from "react-scroll";
 import styled from "styled-components/macro";
 import { motion } from "framer-motion";
 
-const NavLink = styled(motion.div)`
+const NavLink = styled(motion.button)`
   cursor: pointer;
-  margin: 20px;
+  margin: 18px;
+  border: none;
+  background-color: transparent;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 20px;
+  -webkit-tap-highlight-color: transparent;
+
+  :focus {
+    outline: none;
+  }
 `;
 
 const NavItem = ({ name, link }) => {
   return (
     <NavLink
-      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       onClick={() =>
         scroller.scrollTo(link, {
           duration: 800,
