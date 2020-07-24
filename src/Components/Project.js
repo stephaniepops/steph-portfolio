@@ -79,10 +79,6 @@ const TechStackContainer = styled.div`
   }
 `;
 
-const TitleLinkContainer = styled.div`
-  display: flex;
-`;
-
 const Project = ({
   title,
   image,

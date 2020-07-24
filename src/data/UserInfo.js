@@ -16,8 +16,8 @@ export const Projects = [
     techStack: ["React", "JavaScript", "Styled Components", "Framer Motion"],
     image: PortfolioProject,
     imageDescription: "",
-    codeLink: "https://github.com/stephaniepops",
-    demoLink: "https://github.com/stephaniepops",
+    codeLink: "https://github.com/stephaniepops/steph-portfolio",
+    demoLink: null,
   },
 ];
 

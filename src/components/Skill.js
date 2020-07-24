@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { motion } from "framer-motion";
 
-const Logo = styled.img`
+const Logo = styled(motion.img)`
   height: 75px;
   width: 75px;
 `;
@@ -20,7 +21,14 @@ const Text = styled.div`
 const Skill = ({ name, image }) => {
   return (
     <Container>
-      <Logo src={image} alt={name} />
+      <Logo
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 0.1, ease: "easeInOut" },
+        }}
+        src={image}
+        alt={name}
+      />
       <Text>{name}</Text>
     </Container>
   );

@@ -21,7 +21,8 @@ const NavLink = styled(motion.button)`
 const NavItem = ({ name, link }) => {
   return (
     <NavLink
-      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       onClick={() =>
         scroller.scrollTo(link, {
           duration: 800,

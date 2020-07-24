@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 import HyperLinkIcon from "../images/logos/External_Link_(89630)_-_The_Noun_Project.svg";
 import GithubIcon from "../images/GitHubIcon.svg";
+import ProjectLink from "./ProjectLink";
 
 const Container = styled.div`
   display: flex;
@@ -14,20 +15,11 @@ const Container = styled.div`
   }
 `;
 
-const Icon = styled.img`
-  width: 40px;
-  height: 40px;
-`;
-
 const ProjectLinks = ({ codeLink, demoLink }) => {
   return (
     <Container>
-      <a href={codeLink}>
-        <Icon src={HyperLinkIcon} />
-      </a>
-      <a href={demoLink}>
-        <Icon src={GithubIcon} />
-      </a>
+      {demoLink && <ProjectLink link={demoLink} icon={HyperLinkIcon} />}
+      <ProjectLink link={codeLink} icon={GithubIcon} />
     </Container>
   );
 };
