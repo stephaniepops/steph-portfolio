@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import PhotoName from "./components/PhotoName";
 import Description from "./components/Description";
 import Skills from "./components/Skills";
