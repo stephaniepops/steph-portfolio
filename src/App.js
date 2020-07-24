@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import Navbar from "./components/Navbar";
 import PhotoName from "./components/PhotoName";
 import Description from "./components/Description";
 import Skills from "./components/Skills";
@@ -43,7 +44,9 @@ function App() {
   return (
     <Wrapper>
       <AppBoundary variants={container} initial="hidden" animate="show">
-        <Motion variants={item}></Motion>
+        <Motion variants={item}>
+          <Navbar />
+        </Motion>
         <Motion variants={item}>
           <PhotoName />
         </Motion>
