@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 script:
-  - npm run build || true
+  - yarn build
 deploy:
   provider: surge
   cleanup: true
