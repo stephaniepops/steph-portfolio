@@ -12,10 +12,9 @@ const Description = () => {
     <Desc>
       Hello! I'm Steph. Currently I am in my last year of Applied Computer
       Science at the University of Winnipeg. Outside of school I enjoy exploring
-      new technologies to help me become a more well-rounded programmer.
-      Eventually I hope that this portfolio will host many exciting projects.
-      Enjoy{" "}
-      <span role="img" aria-label="black heart">
+      new technologies to help me become a more well-rounded programmer. Thanks
+      for visiting!{" "}
+      <span role='img' aria-label='black heart'>
         🖤
       </span>
     </Desc>
