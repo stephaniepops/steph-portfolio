@@ -19,6 +19,16 @@ export const Projects = [
     codeLink: "https://github.com/stephaniepops/steph-portfolio",
     demoLink: null,
   },
+  {
+    title: "Portfolio Project",
+    description:
+      "After completing a number of React tutorials on Team Treehouse, I decided to practice the skills I learned by creating my portfolio.",
+    techStack: ["React", "JavaScript", "Styled Components", "Framer Motion"],
+    image: PortfolioProject,
+    imageDescription: "",
+    codeLink: "https://github.com/stephaniepops/steph-portfolio",
+    demoLink: null,
+  },
 ];
 
 export const SkillList = [
